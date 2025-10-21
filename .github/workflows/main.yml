@@ -1,0 +1,13 @@
+name: Talha Ahsan
+
+on:
+  schedule:
+    - cron: "35 1 * * *"
+
+jobs: 
+  runner-script:
+    runs-on: ubunto-latest
+
+    steps:
+      - name: Push Notifications
+        run: echo "Sheduled workflow executed"
