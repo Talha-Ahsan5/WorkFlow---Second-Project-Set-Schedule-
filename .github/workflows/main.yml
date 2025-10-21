@@ -1,13 +1,13 @@
-name: Talha Ahsan
+name: Test Schedule
 
 on:
   schedule:
-    - cron: "39 1 * * *"
+    - cron: '*/5 * * * *'  # Every 5 minutes
+  workflow_dispatch:       # Allows manual run from the UI
 
-jobs: 
-  runner-script:
-    runs-on: ubunto-latest
-
+jobs:
+  test-job:
+    runs-on: ubuntu-latest
     steps:
-      - name: Push Notifications
-        run: echo "Sheduled workflow executed"
+      - name: Hello World
+        run: echo "Hello! This ran on a schedule."
